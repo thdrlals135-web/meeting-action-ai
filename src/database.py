@@ -64,6 +64,19 @@ def create_tables(conn):
         """
     )
 
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS chunks (
+            chunk_id TEXT PRIMARY KEY,
+            meeting_id TEXT,
+            chunk_order INTEGER,
+            start_utterance_id TEXT,
+            end_utterance_id TEXT,
+            chunk_text TEXT
+        )
+        """
+    )
+
     conn.commit()
 
 
@@ -121,6 +134,14 @@ def save_utterances(conn, df: pd.DataFrame):
 def save_action_items(conn, df: pd.DataFrame):
     df.to_sql(
         "action_items",
+        conn,
+        if_exists="replace",
+        index=False,
+    )
+
+def save_chunks(conn, df: pd.DataFrame):
+    df.to_sql(
+        "chunks",
         conn,
         if_exists="replace",
         index=False,
