@@ -144,15 +144,22 @@ from src.schema import ActionItem
 def validate_action_items(actions: pd.DataFrame) -> pd.DataFrame:
     """
     추출된 액션아이템이 사전에 정의한 스키마를 만족하는지 검증한다.
-    검증 실패 시 needs_review 상태로 전환할 수 있도록 설계했다.
+    pandas에서 None이 NaN으로 변환되는 경우를 방지하기 위해
+    검증 전 결측값을 명시적으로 None으로 정규화한다.
     """
 
     validated_rows = []
 
     for row in actions.to_dict(orient="records"):
         try:
+            # pandas NaN 값을 Pydantic이 처리 가능한 None으로 변환
+            for key, value in row.items():
+                if pd.isna(value):
+                    row[key] = None
+
             item = ActionItem(**row)
             validated_rows.append(item.model_dump())
+
         except Exception as e:
             row["status"] = "needs_review"
             row["confidence"] = 0.0
