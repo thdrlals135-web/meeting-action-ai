@@ -194,6 +194,8 @@ Streamlit 대시보드는 다음 위젯을 제공합니다.
 
 의사결정자는 대시보드를 통해 담당자별 업무 쏠림, 반복적으로 발생하는 캠페인 이슈, 사람이 검토해야 할 저신뢰 액션아이템을 확인할 수 있습니다.
 
+추가 산출물로 `outputs/meeting_summary_sample.md`에 회의록 요약 샘플을 저장하고, `outputs/slack_payload_sample.json`에 Slack 전송용 액션아이템 메시지 payload를 저장했습니다.
+
 ## 9. 멱등성
 
 파이프라인은 재실행 시 같은 결과를 유지하도록 설계했습니다.
