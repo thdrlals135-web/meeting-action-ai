@@ -1,0 +1,80 @@
+{
+  "channel": "#campaign-action-items",
+  "username": "Meeting Action Bot",
+  "text": "노바드림 캠페인 회의 액션아이템이 생성되었습니다.",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "노바드림 캠페인 회의 액션아이템 정리"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*총 액션아이템:* 8개\n*검토 필요 항목:* 3개"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[HIGH] 픽셀 이벤트 중복 발화 원인을 보정하고 성과 데이터를 다시 산출해 공유한다.*\n- 담당자: 수아 (퍼포먼스 마케터)\n- 기한: 내일 오전\n- Confidence: 0.95\n- 근거 발화: [\"utt_005\", \"utt_009\", \"utt_029\", \"utt_030\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[MEDIUM] 비주얼 카드 순서와 빈 슬롯 카피를 1차 정리한다.*\n- 담당자: 채린 (콘텐츠 디자이너)\n- 기한: 내일 오전\n- Confidence: 0.92\n- 근거 발화: [\"utt_017\", \"utt_032\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[MEDIUM] 캠페인 세트 분리를 진행하고 광고주 컨펌 필요 사항을 정리한다.*\n- 담당자: 수아 (퍼포먼스 마케터)\n- 기한: 수요일 오전\n- Confidence: 0.9\n- 근거 발화: [\"utt_018\", \"utt_034\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[HIGH] 광고주 담당자에게 신제품 누끼 컷 전달을 재요청한다.*\n- 담당자: 지훈 (마케팅 팀장)\n- 기한: 오늘 안\n- Confidence: 0.94\n- 근거 발화: [\"utt_026\", \"utt_028\", \"utt_031\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[HIGH] 메인 헤드라인, 랜딩 첫 화면, CTA 버튼 카피를 우선 수정한다.*\n- 담당자: 채린 (콘텐츠 디자이너)\n- 기한: 금요일\n- Confidence: 0.88\n- 근거 발화: [\"utt_023\", \"utt_032\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[MEDIUM] CTA 변경 시 전환 추적 이벤트를 함께 확인한다.*\n- 담당자: 수아 (퍼포먼스 마케터)\n- 기한: 미정\n- Confidence: 0.0\n- 근거 발화: [\"utt_024\", \"utt_025\", \"utt_034\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[MEDIUM] 기존 A/B 테스트를 종료하고 변경된 카피 기준으로 다시 세팅한다.*\n- 담당자: 수아 (퍼포먼스 마케터)\n- 기한: 미정\n- Confidence: 0.0\n- 근거 발화: [\"utt_021\", \"utt_033\"]"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*[HIGH] 캠페인 세트 분리와 채널 운영안에 대한 광고주 컨펌을 받는다.*\n- 담당자: 지훈 (마케팅 팀장)\n- 기한: 미정\n- Confidence: 0.0\n- 근거 발화: [\"utt_019\", \"utt_035\", \"utt_036\"]"
+      }
+    }
+  ]
+}
