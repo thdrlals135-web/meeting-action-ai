@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # Meeting Action AI
 
 회의 transcript JSON을 기반으로 회의 발화를 정제하고, 액션아이템을 구조화하여 SQLite에 저장한 뒤 Streamlit 대시보드로 확인할 수 있는 PoC 프로젝트입니다.
