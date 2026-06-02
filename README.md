@@ -236,3 +236,36 @@ Streamlit 대시보드는 다음 위젯을 제공합니다.
 - 액션아이템 진행상황 업데이트 루프 구현
 - 유사 회의 및 과거 결정 검색 기능 추가
 - precision, recall 기반 추출 품질 평가 코드 추가
+
+## 12. 선택 구현 항목 및 범위
+
+본 PoC는 필수 구현사항을 우선 완성하고, 선택 구현 항목은 시간과 보안 제약을 고려하여 일부는 설계 또는 문서화 수준으로 반영했습니다.
+
+### 구현 또는 반영한 항목
+
+- 도입 후 4주 운영·검증 계획
+  - `docs/proposal.md`에 KPI, 모니터링 방식, 주차별 검증 계획을 정리했습니다.
+
+- Slack mock payload
+  - `outputs/slack_payload_sample.json`에 Slack 전송용 메시지 payload 샘플을 생성했습니다.
+
+- 회의록 요약 샘플
+  - `outputs/meeting_summary_sample.md`에 회의록 요약 산출물을 추가했습니다.
+
+### 이번 PoC에서 제외한 항목
+
+- 실제 외부 LLM API 호출
+  - 회의 내용 외부 유출 금지 조건을 고려하여 실제 외부 API 호출은 제외했습니다.
+  - 대신 LLM이 반환한다고 가정한 mock output을 사용하고, 이후 검증·저장·시각화 흐름을 구현했습니다.
+
+- 음성 직접 STT 및 화자 분리
+  - 제공 transcript JSON으로 대체했습니다.
+  - STT는 향후 local Whisper 기반으로 확장할 수 있습니다.
+
+- 임베딩 기반 유사 결정 검색
+  - 현재는 BoW 기반 반복 이슈 키워드 분석을 구현했습니다.
+  - 향후 회의 데이터가 누적되면 embedding 기반 유사 결정 검색으로 확장할 수 있습니다.
+
+- precision / recall 측정 코드
+  - 현재는 샘플 회의 1건의 mock extraction 결과를 사용했습니다.
+  - 향후 gold label을 구축한 뒤 precision, recall 기반 품질 평가를 추가할 수 있습니다.
